@@ -1,82 +1,82 @@
 # 🛡️ Sentinel Code Guardian
-### Auditor de Seguridad Zero-Trust & Suite de Ciberseguridad
+### Zero-Trust Security Auditor & Cybersecurity Suite
 
-![Sentinel Banner](https://via.placeholder.com/1200x300/0f172a/38bdf8?text=SENTINEL+CODE+GUARDIAN)
+![Sentinel Banner](./assets/banner.png)
 
 [![Antigravity](https://img.shields.io/badge/Platform-Google_Antigravity-4285F4?style=for-the-badge&logo=google)](https://labs.google/)
 [![Security](https://img.shields.io/badge/Security-OWASP_Top_10-red?style=for-the-badge&logo=owasp)](https://owasp.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
 
-> **Auditoría Estática** • **Cálculo de Riesgo (IxPxE)** • **Simulación Red/Blue Team** • **Reportes de Compliance**
+> **Static Audit** • **Risk Scoring (IxPxE)** • **Red/Blue Team Simulation** • **Compliance Reports**
 
 ---
 
-## 📖 Visión General
+## 📖 Overview
 
-**Sentinel Code Guardian** es un flujo de trabajo (Workflow) avanzado diseñado para **Google Antigravity IDE**. Transforma al agente de IA nativo en un **Ingeniero de Seguridad Senior** capaz de realizar auditorías de código en tiempo real, detectar vulnerabilidades críticas y simular ataques para validar la robustez del software.
+**Sentinel Code Guardian** is an advanced Workflow designed for **Google Antigravity IDE**. It transforms the native AI agent into a **Senior Security Engineer** capable of performing real-time code audits, detecting critical vulnerabilities, and simulating attacks to validate software robustness.
 
-A diferencia de un linter tradicional, Sentinel utiliza un **Sandbox Mental** que simula herramientas de análisis estático (SAST) para evaluar patrones de inyección, secretos hardcodeados y vulnerabilidades de infraestructura bajo una doctrina de **Zero Trust**.
+Unlike a traditional linter, Sentinel uses a **Mental Sandbox** that simulates static analysis tools (SAST) to evaluate injection patterns, hardcoded secrets, and infrastructure vulnerabilities under a **Zero Trust** doctrine.
 
 ---
 
-## 🚀 Características Principales
+## 🚀 Key Features
 
-| Módulo | Descripción |
+| Module | Description |
 | :--- | :--- |
-| **🔐 Escáner de Secretos** | Detecta y censura API Keys, Tokens AWS y Claves Privadas antes de que lleguen al commit. |
-| **💉 Detección de Inyecciones** | Análisis heurístico de **XSS** y **SQL Injection** (concatenación de strings). |
-| **🧮 Modelo de Riesgo** | Clasificación matemática de vulnerabilidades: **Impacto × Probabilidad × Exposición**. |
-| **⚔️ Modo Wargame** | Simulación adversarial: **Red Team** genera un exploit real vs **Blue Team** que genera el parche. |
-| **📄 Persistencia** | Generación automática de reportes físicos (`.md`) en `security_reports/` para auditorías. |
+| **🔐 Secrets Scanner** | Detects and censors API Keys, AWS Tokens, and Private Keys before they reach the commit. |
+| **💉 Injection Detection** | Heuristic analysis of **XSS** and **SQL Injection** (string concatenation). |
+| **🧮 Risk Model** | Mathematical vulnerability classification: **Impact × Probability × Exposure**. |
+| **⚔️ Wargame Mode** | Adversarial simulation: **Red Team** generates a real exploit vs. **Blue Team** generating the patch. |
+| **📄 Persistence** | Automatic generation of physical reports (`.md`) in `security_reports/` for audits. |
 
 ---
 
-## 🛠️ Instalación e Integración
+## 🛠️ Installation & Integration
 
-Sentinel se instala como un **Global Workflow** en Antigravity.
+Sentinel is installed as a **Global Workflow** in Antigravity.
 
-### Pasos de Configuración:
+### Configuration Steps:
 
-1. Abre **Google Antigravity IDE**.
-2. Ve al menú **Customizations** -> **Workflows**.
-3. Haz clic en **`+ Global`**.
-4. Rellena los campos así:
+1. Open **Google Antigravity IDE**.
+2. Go to the menu **Customizations** -> **Workflows**.
+3. Click on **`+ Global`**.
+4. Fill in the fields as follows:
 
-| Campo | Valor |
+| Field | Value |
 | :--- | :--- |
 | **Name** | `sentinel` |
-| **Description** | `Suite de Seguridad completa: Auditoría OWASP, Validación CVE y Wargames.` |
-| **Prompt** | [Copiar el Prompt Maestro desde workflow_prompt.md](./workflow_prompt.md) |
+| **Description** | `Complete Security Suite: OWASP Audit, CVE Validation, and Wargames.` |
+| **Prompt** | [Copy the Master Prompt from sentinel-code-guardian.md](./sentinel-code-guardian.md) |
 
 ---
 
-## 💻 Guía de Uso (Cheat Sheet)
+## 💻 Usage Guide (Cheat Sheet)
 
-Una vez instalado, invoca a Sentinel desde el chat usando el comando `/sentinel`.
+Once installed, invoke Sentinel from the chat using the `/sentinel` command.
 
-### 1. Auditoría Estándar
-Analiza el archivo abierto actualmente o el código seleccionado.
+### 1. Standard Audit
+Analyzes the currently open file or selected code.
 
 ```bash
 /sentinel
 ```
 
-### 2. Simulación de Ataque (Wargame)
-Inicia una batalla simulada para entender cómo un atacante rompería tu código. Muestra el Payload y la Defensa.
+### 2. Attack Simulation (Wargame)
+Starts a simulated battle to understand how an attacker would break your code. Displays the Payload and Defense.
 
 ```bash
 /sentinel --wargame
 ```
 
-### 3. Reparación Automática
-Solicita una reescritura del código inseguro aplicando patrones de diseño seguros.
+### 3. Auto-Repair
+Requests a rewrite of insecure code applying secure design patterns.
 
 ```bash
 /sentinel fix
 ```
 
-### 4. Generación de Reporte Físico
-Fuerza la creación de un archivo de evidencia en la carpeta `security_reports/`.
+### 4. Generate Physical Report
+Forces the creation of an evidence file in the `security_reports/` folder.
 
 ```bash
 /sentinel audit
@@ -84,51 +84,44 @@ Fuerza la creación de un archivo de evidencia en la carpeta `security_reports/`
 
 ---
 
-## 📊 Modelo de Riesgo (Risk Score)
+## 📊 Risk Model (Risk Score)
 
-Sentinel calcula la severidad usando la fórmula:
+Sentinel calculates severity using the formula:
 
-**Score = Impacto × Probabilidad × Exposición**
+**Score = Impact × Probability × Exposure**
 
-| Score | Nivel | Acción Requerida |
+| Score | Level | Required Action |
 | :--- | :--- | :--- |
-| **18 - 27** | 🚨 **CRÍTICA** | **BLOQUEANTE.** Arreglo inmediato. No desplegar. |
-| **12 - 17** | 🔴 **ALTA** | Debe arreglarse antes del release. |
-| **06 - 11** | 🟠 **MEDIA** | Agendar para próximo sprint. |
-| **01 - 05** | 🟢 **BAJA** | Deuda técnica / Mejora opcional. |
+| **18 - 27** | 🚨 **CRITICAL** | **BLOCKER.** Immediate fix. Do not deploy. |
+| **12 - 17** | 🔴 **HIGH** | Must be fixed before release. |
+| **06 - 11** | 🟠 **MEDIUM** | Schedule for next sprint. |
+| **01 - 05** | 🟢 **LOW** | Technical debt / Optional improvement. |
 
 ---
 
-## 📂 Estructura del Repositorio
+## 📂 Repository Structure
 
-Este repositorio contiene el código fuente Python que alimenta la lógica del agente:
+This repository contains the essential files to implement and use the workflow:
 
 ```text
 .
-├── agent.json               # Definición base del Agente
-├── workflow_prompt.md       # ⚠️ PROMPT MAESTRO (Instalar este)
-├── mission.md               # Directivas de Misión
-├── rules.md                 # Reglas Operativas
-├── tools/                   # Lógica Fuente
-│   ├── scan_for_secrets.py  # Regex para credenciales
-│   ├── scan_for_injections.py # Heurística XSS/SQLi
-│   ├── scan_for_os_vulns.py # Detección RCE
-│   └── score_risks.py       # Algoritmo de Scoring
-└── .context/                # Base de Conocimiento
-    ├── risk_model.md        # Definición matemática de riesgo
-    └── security_principles.md # Principios Zero Trust
+├── assets/                    # Project Images (Banner)
+├── readme.md                  # Project Documentation
+├── sentinel-code-guardian.md  # ⚠️ MASTER PROMPT (Install this)
+├── USAGE_EN.md                # User Manual (English)
+└── USAGE_ES.md                # User Manual (Spanish)
 ```
 
 ---
 
 ## ⚠️ Disclaimer
 
-**Sentinel Code Guardian** es una herramienta de asistencia basada en IA. No reemplaza una auditoría humana certificada. El usuario es el responsable final del código desplegado en producción.
+**Sentinel Code Guardian** is an AI-based assistance tool. It does not replace a certified human audit. The user is ultimately responsible for the code deployed to production.
 
 ---
 
-## 👨‍💻 Autor y Créditos
+## 👨‍💻 Author & Credits
 
-**Desarrollado y mantenido por:**
+**Developed and maintained by:**
 **Fran Kloster**
-**Rol:** Developer & Cybersecurity Analyst
+**Role:** Developer & Cybersecurity Analyst
