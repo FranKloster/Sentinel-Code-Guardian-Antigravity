@@ -1,7 +1,7 @@
 # 🛡️ Sentinel Code Guardian
 ### Zero-Trust Security Auditor & Cybersecurity Suite
 
-![Sentinel Banner](./assets/banner.png)
+![Sentinel Banner](./assets/banner-sentinel-code-guardian.png)
 
 [![Antigravity](https://img.shields.io/badge/Platform-Google_Antigravity-4285F4?style=for-the-badge&logo=google)](https://labs.google/)
 [![Security](https://img.shields.io/badge/Security-OWASP_Top_10-red?style=for-the-badge&logo=owasp)](https://owasp.org/)
